@@ -7,23 +7,65 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6C720280836F2E15FE1D25BD /* Pods_best_buy_lighting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B27B81A60DE77D9EEF152AC1 /* Pods_best_buy_lighting.framework */; };
+		9D9AD75B231AF7BD0072C327 /* InsertCartItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9AD75A231AF7BD0072C327 /* InsertCartItem.swift */; };
+		9D9AD75D231AFAA90072C327 /* UpdateProductQuantity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9AD75C231AFAA90072C327 /* UpdateProductQuantity.swift */; };
+		9D9AD75F231B04230072C327 /* FetchCartItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9AD75E231B04230072C327 /* FetchCartItems.swift */; };
+		9DD15453230F06ED001AED1B /* LightingProductsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD15452230F06ED001AED1B /* LightingProductsAPI.swift */; };
+		9DD15455230F0D3F001AED1B /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD15454230F0D3F001AED1B /* ProductModel.swift */; };
+		9DD15458230F2083001AED1B /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD15457230F2083001AED1B /* ProductCell.swift */; };
+		9DD1545A230F2ADE001AED1B /* ProductDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DD15459230F2ADE001AED1B /* ProductDetail.storyboard */; };
+		9DD1545C230F2B2F001AED1B /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD1545B230F2B2F001AED1B /* ProductDetailViewController.swift */; };
+		9DD1548F2315A31C001AED1B /* FindStoresScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DD1548E2315A31C001AED1B /* FindStoresScreen.storyboard */; };
+		9DD154912315A32D001AED1B /* FindStoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD154902315A32D001AED1B /* FindStoresViewController.swift */; };
+		9DD154932315AA15001AED1B /* StoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD154922315AA15001AED1B /* StoreCell.swift */; };
+		9DD154952315D401001AED1B /* StoresForSkuApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD154942315D401001AED1B /* StoresForSkuApi.swift */; };
+		9DD154972315D64F001AED1B /* StoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD154962315D64F001AED1B /* StoreModel.swift */; };
+		9DD154992318339C001AED1B /* ViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD154982318339C001AED1B /* ViewControllerExtensions.swift */; };
+		9DD1549C23183B11001AED1B /* Cart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DD1549B23183B11001AED1B /* Cart.storyboard */; };
+		9DD1549E23183B74001AED1B /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD1549D23183B74001AED1B /* CartViewController.swift */; };
+		9DD154A0231842DB001AED1B /* CartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD1549F231842DB001AED1B /* CartCell.swift */; };
 		9DDE589C230DA072001DC06D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDE589B230DA072001DC06D /* AppDelegate.swift */; };
-		9DDE589E230DA072001DC06D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDE589D230DA072001DC06D /* ViewController.swift */; };
-		9DDE58A1230DA072001DC06D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DDE589F230DA072001DC06D /* Main.storyboard */; };
+		9DDE589E230DA072001DC06D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDE589D230DA072001DC06D /* LoginViewController.swift */; };
+		9DDE58A1230DA072001DC06D /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DDE589F230DA072001DC06D /* Login.storyboard */; };
 		9DDE58A4230DA072001DC06D /* best_buy_lighting.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9DDE58A2230DA072001DC06D /* best_buy_lighting.xcdatamodeld */; };
 		9DDE58A6230DA073001DC06D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DDE58A5230DA073001DC06D /* Assets.xcassets */; };
 		9DDE58A9230DA073001DC06D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DDE58A7230DA073001DC06D /* LaunchScreen.storyboard */; };
+		9DDE58B1230DBAF4001DC06D /* ProductList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DDE58B0230DBAF4001DC06D /* ProductList.storyboard */; };
+		9DDE58B3230DBB33001DC06D /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDE58B2230DBB33001DC06D /* ProductListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		145621E382C55C80A1FCD523 /* Pods-best_buy_lighting.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-best_buy_lighting.debug.xcconfig"; path = "Target Support Files/Pods-best_buy_lighting/Pods-best_buy_lighting.debug.xcconfig"; sourceTree = "<group>"; };
+		6A85774A77FDC07BE98825B8 /* Pods-best_buy_lighting.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-best_buy_lighting.release.xcconfig"; path = "Target Support Files/Pods-best_buy_lighting/Pods-best_buy_lighting.release.xcconfig"; sourceTree = "<group>"; };
+		9D9AD75A231AF7BD0072C327 /* InsertCartItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertCartItem.swift; sourceTree = "<group>"; };
+		9D9AD75C231AFAA90072C327 /* UpdateProductQuantity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProductQuantity.swift; sourceTree = "<group>"; };
+		9D9AD75E231B04230072C327 /* FetchCartItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchCartItems.swift; sourceTree = "<group>"; };
+		9DD15452230F06ED001AED1B /* LightingProductsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightingProductsAPI.swift; sourceTree = "<group>"; };
+		9DD15454230F0D3F001AED1B /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
+		9DD15457230F2083001AED1B /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		9DD15459230F2ADE001AED1B /* ProductDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProductDetail.storyboard; sourceTree = "<group>"; };
+		9DD1545B230F2B2F001AED1B /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
+		9DD1548E2315A31C001AED1B /* FindStoresScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FindStoresScreen.storyboard; sourceTree = "<group>"; };
+		9DD154902315A32D001AED1B /* FindStoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindStoresViewController.swift; sourceTree = "<group>"; };
+		9DD154922315AA15001AED1B /* StoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreCell.swift; sourceTree = "<group>"; };
+		9DD154942315D401001AED1B /* StoresForSkuApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoresForSkuApi.swift; sourceTree = "<group>"; };
+		9DD154962315D64F001AED1B /* StoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreModel.swift; sourceTree = "<group>"; };
+		9DD154982318339C001AED1B /* ViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtensions.swift; sourceTree = "<group>"; };
+		9DD1549B23183B11001AED1B /* Cart.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Cart.storyboard; sourceTree = "<group>"; };
+		9DD1549D23183B74001AED1B /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		9DD1549F231842DB001AED1B /* CartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartCell.swift; sourceTree = "<group>"; };
 		9DDE5898230DA072001DC06D /* best_buy_lighting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = best_buy_lighting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DDE589B230DA072001DC06D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9DDE589D230DA072001DC06D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		9DDE58A0230DA072001DC06D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9DDE589D230DA072001DC06D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		9DDE58A0230DA072001DC06D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		9DDE58A3230DA072001DC06D /* best_buy_lighting.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = best_buy_lighting.xcdatamodel; sourceTree = "<group>"; };
 		9DDE58A5230DA073001DC06D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9DDE58A8230DA073001DC06D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9DDE58AA230DA073001DC06D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9DDE58B0230DBAF4001DC06D /* ProductList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProductList.storyboard; sourceTree = "<group>"; };
+		9DDE58B2230DBB33001DC06D /* ProductListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
+		B27B81A60DE77D9EEF152AC1 /* Pods_best_buy_lighting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_best_buy_lighting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +73,92 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C720280836F2E15FE1D25BD /* Pods_best_buy_lighting.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9D9AD759231AF5AD0072C327 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				9D9AD75A231AF7BD0072C327 /* InsertCartItem.swift */,
+				9D9AD75C231AFAA90072C327 /* UpdateProductQuantity.swift */,
+				9D9AD75E231B04230072C327 /* FetchCartItems.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		9DD1544E230F0564001AED1B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9DD15456230F205F001AED1B /* TableViewCells */,
+				9DDE589D230DA072001DC06D /* LoginViewController.swift */,
+				9DDE58B2230DBB33001DC06D /* ProductListViewController.swift */,
+				9DD1545B230F2B2F001AED1B /* ProductDetailViewController.swift */,
+				9DD154902315A32D001AED1B /* FindStoresViewController.swift */,
+				9DD1549D23183B74001AED1B /* CartViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		9DD1544F230F0574001AED1B /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				9DDE589F230DA072001DC06D /* Login.storyboard */,
+				9DDE58B0230DBAF4001DC06D /* ProductList.storyboard */,
+				9DDE58A7230DA073001DC06D /* LaunchScreen.storyboard */,
+				9DD15459230F2ADE001AED1B /* ProductDetail.storyboard */,
+				9DD1548E2315A31C001AED1B /* FindStoresScreen.storyboard */,
+				9DD1549B23183B11001AED1B /* Cart.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		9DD15450230F0587001AED1B /* DataModels */ = {
+			isa = PBXGroup;
+			children = (
+				9DD15454230F0D3F001AED1B /* ProductModel.swift */,
+				9DD154962315D64F001AED1B /* StoreModel.swift */,
+			);
+			path = DataModels;
+			sourceTree = "<group>";
+		};
+		9DD15451230F0595001AED1B /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				9DD15452230F06ED001AED1B /* LightingProductsAPI.swift */,
+				9DD154942315D401001AED1B /* StoresForSkuApi.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		9DD15456230F205F001AED1B /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				9DD15457230F2083001AED1B /* ProductCell.swift */,
+				9DD154922315AA15001AED1B /* StoreCell.swift */,
+				9DD1549F231842DB001AED1B /* CartCell.swift */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		9DD1549A231833AC001AED1B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9DD154982318339C001AED1B /* ViewControllerExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		9DDE588F230DA072001DC06D = {
 			isa = PBXGroup;
 			children = (
 				9DDE589A230DA072001DC06D /* best_buy_lighting */,
 				9DDE5899230DA072001DC06D /* Products */,
+				EB290BB81ECCF69B79FB017E /* Pods */,
+				E86F70AD55CC400C2A627D5D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +173,35 @@
 		9DDE589A230DA072001DC06D /* best_buy_lighting */ = {
 			isa = PBXGroup;
 			children = (
+				9D9AD759231AF5AD0072C327 /* CoreData */,
+				9DD1549A231833AC001AED1B /* Extensions */,
+				9DD15451230F0595001AED1B /* Networking */,
+				9DD15450230F0587001AED1B /* DataModels */,
+				9DD1544F230F0574001AED1B /* Storyboards */,
+				9DD1544E230F0564001AED1B /* ViewControllers */,
 				9DDE589B230DA072001DC06D /* AppDelegate.swift */,
-				9DDE589D230DA072001DC06D /* ViewController.swift */,
-				9DDE589F230DA072001DC06D /* Main.storyboard */,
 				9DDE58A5230DA073001DC06D /* Assets.xcassets */,
-				9DDE58A7230DA073001DC06D /* LaunchScreen.storyboard */,
 				9DDE58AA230DA073001DC06D /* Info.plist */,
 				9DDE58A2230DA072001DC06D /* best_buy_lighting.xcdatamodeld */,
 			);
 			path = best_buy_lighting;
+			sourceTree = "<group>";
+		};
+		E86F70AD55CC400C2A627D5D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B27B81A60DE77D9EEF152AC1 /* Pods_best_buy_lighting.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EB290BB81ECCF69B79FB017E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				145621E382C55C80A1FCD523 /* Pods-best_buy_lighting.debug.xcconfig */,
+				6A85774A77FDC07BE98825B8 /* Pods-best_buy_lighting.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +211,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9DDE58AD230DA073001DC06D /* Build configuration list for PBXNativeTarget "best_buy_lighting" */;
 			buildPhases = (
+				2B8588AAF311459FF9C485B8 /* [CP] Check Pods Manifest.lock */,
 				9DDE5894230DA072001DC06D /* Sources */,
 				9DDE5895230DA072001DC06D /* Frameworks */,
 				9DDE5896230DA072001DC06D /* Resources */,
+				11AA8F29A5C5296CE6893E63 /* [CP] Embed Pods Frameworks */,
+				DEBC16F7869B4F1EDCDBF03A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -126,20 +266,112 @@
 			buildActionMask = 2147483647;
 			files = (
 				9DDE58A9230DA073001DC06D /* LaunchScreen.storyboard in Resources */,
+				9DD1548F2315A31C001AED1B /* FindStoresScreen.storyboard in Resources */,
 				9DDE58A6230DA073001DC06D /* Assets.xcassets in Resources */,
-				9DDE58A1230DA072001DC06D /* Main.storyboard in Resources */,
+				9DDE58B1230DBAF4001DC06D /* ProductList.storyboard in Resources */,
+				9DDE58A1230DA072001DC06D /* Login.storyboard in Resources */,
+				9DD1545A230F2ADE001AED1B /* ProductDetail.storyboard in Resources */,
+				9DD1549C23183B11001AED1B /* Cart.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		11AA8F29A5C5296CE6893E63 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-best_buy_lighting/Pods-best_buy_lighting-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-best_buy_lighting/Pods-best_buy_lighting-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2B8588AAF311459FF9C485B8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-best_buy_lighting-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DEBC16F7869B4F1EDCDBF03A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-best_buy_lighting/Pods-best_buy_lighting-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-best_buy_lighting/Pods-best_buy_lighting-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9DDE5894230DA072001DC06D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D9AD75D231AFAA90072C327 /* UpdateProductQuantity.swift in Sources */,
 				9DDE58A4230DA072001DC06D /* best_buy_lighting.xcdatamodeld in Sources */,
-				9DDE589E230DA072001DC06D /* ViewController.swift in Sources */,
+				9DD154A0231842DB001AED1B /* CartCell.swift in Sources */,
+				9D9AD75F231B04230072C327 /* FetchCartItems.swift in Sources */,
+				9DD154932315AA15001AED1B /* StoreCell.swift in Sources */,
+				9DD1549E23183B74001AED1B /* CartViewController.swift in Sources */,
+				9DD15455230F0D3F001AED1B /* ProductModel.swift in Sources */,
+				9DD154992318339C001AED1B /* ViewControllerExtensions.swift in Sources */,
+				9DDE589E230DA072001DC06D /* LoginViewController.swift in Sources */,
+				9DD154912315A32D001AED1B /* FindStoresViewController.swift in Sources */,
+				9DD154972315D64F001AED1B /* StoreModel.swift in Sources */,
+				9DD15453230F06ED001AED1B /* LightingProductsAPI.swift in Sources */,
+				9DDE58B3230DBB33001DC06D /* ProductListViewController.swift in Sources */,
+				9DD1545C230F2B2F001AED1B /* ProductDetailViewController.swift in Sources */,
+				9DD15458230F2083001AED1B /* ProductCell.swift in Sources */,
+				9D9AD75B231AF7BD0072C327 /* InsertCartItem.swift in Sources */,
+				9DD154952315D401001AED1B /* StoresForSkuApi.swift in Sources */,
 				9DDE589C230DA072001DC06D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,12 +379,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		9DDE589F230DA072001DC06D /* Main.storyboard */ = {
+		9DDE589F230DA072001DC06D /* Login.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				9DDE58A0230DA072001DC06D /* Base */,
 			);
-			name = Main.storyboard;
+			name = Login.storyboard;
 			sourceTree = "<group>";
 		};
 		9DDE58A7230DA073001DC06D /* LaunchScreen.storyboard */ = {
@@ -284,6 +516,7 @@
 		};
 		9DDE58AE230DA073001DC06D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 145621E382C55C80A1FCD523 /* Pods-best_buy_lighting.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -302,6 +535,7 @@
 		};
 		9DDE58AF230DA073001DC06D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A85774A77FDC07BE98825B8 /* Pods-best_buy_lighting.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" id="BYZ-38-t0r" customClass="LoginViewController" customModule="best_buy_lighting" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6md-pO-4Xh" customClass="GIDSignInButton">
+                                <rect key="frame" x="87" y="408" width="240" height="80"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="62M-Nj-m6i"/>
+                                    <constraint firstAttribute="height" constant="80" id="tGI-0C-fdq"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8yp-dI-2Ty">
+                                <rect key="frame" x="174.5" y="565" width="65" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="65" id="1Ds-EG-hQQ"/>
+                                    <constraint firstAttribute="height" constant="34" id="nuj-HU-wkH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Log Out"/>
+                                <connections>
+                                    <action selector="logOutClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="It4-kX-lM0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6md-pO-4Xh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="S8q-7R-DxB"/>
+                            <constraint firstItem="8yp-dI-2Ty" firstAttribute="top" secondItem="6md-pO-4Xh" secondAttribute="bottom" constant="77" id="clj-ev-SWa"/>
+                            <constraint firstItem="6md-pO-4Xh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="goD-wN-64s"/>
+                            <constraint firstItem="8yp-dI-2Ty" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zQL-NS-TGv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <segue destination="sg9-nn-lAq" kind="show" identifier="ProductListViewControllerSegue" id="N1i-ZL-dVw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--ProductListViewController-->
+        <scene sceneID="Gs0-te-gtg">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ProductList" referencedIdentifier="ProductListViewController" id="sg9-nn-lAq" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mOB-yb-2DF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1253" y="69"/>
+        </scene>
+    </scenes>
+</document>
