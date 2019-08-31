@@ -53,11 +53,25 @@ class ProductDetailViewController: UIViewController {
     
     @IBAction func addToCartClicked(_ sender: UIButton) {
         
+        let itemCount = FetchCartItemQuantity().cartItemCount(sku: product.sku) ?? 0
+        print("there are this many items \(itemCount)")
+        
         // create the alert
         let alert = UIAlertController(title: "Add?", message: "Would you like to add \(product.name) to your cart?", preferredStyle: UIAlertController.Style.alert)
         
         // add the actions (buttons)
-        alert.addAction(UIAlertAction(title: "Continue", style: UIAlertAction.Style.default, handler: {action in self.insertProductToCart()}))
+        alert.addAction(UIAlertAction(title: "Continue", style: UIAlertAction.Style.default, handler: {
+            
+            action in
+            
+            if itemCount > 0 {
+                self.updateProductQuantity(itemCount: itemCount)
+            } else if itemCount == 0 {
+                self.insertProductToCart()
+            }
+            
+            
+        }))
         alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: {action in print("cancel")}))
         
         // show the alert
@@ -66,6 +80,7 @@ class ProductDetailViewController: UIViewController {
     }
     
     @objc func insertProductToCart() {
+        
         InsertCartItem().insert(addedProduct: product) { (success) in
             var title = "Failure"
             var message = "There was an error trying to save to cart"
@@ -79,5 +94,21 @@ class ProductDetailViewController: UIViewController {
             self.present(alert, animated: true, completion: nil)
         }
     }
-
+    
+    func updateProductQuantity(itemCount: Int) {
+        
+        print("item count \(itemCount)")
+        
+        UpdateCartItemQuantity().updateQuantity(updatedProductSKU: product!.sku, initialQuantity: itemCount, addend: 1) { (success) in
+            print("success")
+        }
+        
+    }
+        
 }
+
+
+
+
+
+

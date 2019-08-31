@@ -8,7 +8,8 @@
 
 import UIKit
 
-class CartViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class CartViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, didUpdateQuantity {
+  
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var subtotalLabel: UILabel!
@@ -25,7 +26,7 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func setupUI() {
-        subtotalLabel.text = "Subtotal (\(totalCount) items): $\(totalPrice)"
+        subtotalLabel.text = "Subtotal (\(totalCount) items): $\(String(format: "%.2f", totalPrice))"
     }
     
     func fetchCartData() {
@@ -45,7 +46,7 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
         // get total count of all itmes
         products.forEach { (product) in
             count += product.quantity!
-            price += (product.salePrice! * Double(product.quantity!))
+            price += product.salePrice! * Double(product.quantity!)
         }
         
         return (price, count)
@@ -64,6 +65,16 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
             description: product.shortDescription!,
             price: product.salePrice!,
             sku: product.sku, imageUrl: product.image!)
+        cell.delegate = self
         return cell
     }
+    
+    func reloadUI() {
+         print("reload ui called")
+
+        // I hear this is not an ideal way to reload this view controller, but I would like the VC to react to state changes and this works...
+        self.viewDidLoad()
+
+    }
+    
 }

@@ -73,18 +73,20 @@ class FindStoresViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func loadStores() {
-        
+        self.showSpinner(onView: self.view)
         StoresForSkuApi().fetch(sku: sku!) { (stores, error) in
             print("stores for sku api called")
             if let error = error {
                 print(error.localizedDescription)
                 self.showNetworkErrorAlert(title: "There was an error",message: error.localizedDescription)
+                self.removeSpinner()
                 return
             }
             self.stores = stores!
             DispatchQueue.main.async {
                 print("reloading data")
                 self.tableView.reloadData()
+                self.removeSpinner()
                 if self.stores.isEmpty {
                     self.showNetworkErrorAlert(title: "No results",message: "There were no stores found")
                 }

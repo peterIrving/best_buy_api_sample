@@ -52,6 +52,7 @@ class ProductListViewController: UITableViewController, GIDSignInUIDelegate {
             print("api called")
             if let error = error {
                 self.showNetworkErrorAlert(title: "There was an error",message: error.localizedDescription)
+                self.removeSpinner()
                 return
             }
             self.products = loadedProducts!
