@@ -26,9 +26,8 @@ class ProductListViewController: UITableViewController, GIDSignInUIDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupRefreshControll()
-        loadProducts()
+        loadProducts(isRefreshing: false)
     }
     
     func setupRefreshControll() {
@@ -41,32 +40,46 @@ class ProductListViewController: UITableViewController, GIDSignInUIDelegate {
     }
     
     @objc func refreshProductData(_ sender: Any) {
-        loadProducts()
+        loadProducts(isRefreshing: true)
+        
     }
     
-    func loadProducts() {
-        self.showSpinner(onView: self.view)
+    func loadProducts(isRefreshing: Bool) {
+        if isRefreshing == false {
+            self.showSpinner(onView: self.view)
+        }
         
-        LightingProductsAPI().fetch { (loadedProducts, error) in
-            
-            print("api called")
+        LightingProductsAPI().getProductData(refresh: isRefreshing) { (fetchedProducts, error) in
             if let error = error {
                 self.showNetworkErrorAlert(title: "There was an error",message: error.localizedDescription)
                 self.removeSpinner()
                 return
             }
-            self.products = loadedProducts!
             
-            DispatchQueue.main.async {
-                self.removeSpinner()
-                self.refresher.endRefreshing()
-                self.tableView.reloadData()
-                if self.products.isEmpty {
-                    self.showNetworkErrorAlert(title: "No results",message: "There were no results found")
-                }
+            
+            if let prods = fetchedProducts {
+                print("setting proudcts")
+                self.products = prods
+            } else {
+                print("setting products to []")
+                self.products = []
             }
             
-            
+
+            DispatchQueue.main.async {
+                
+                if isRefreshing {
+                    self.refresher.endRefreshing()
+                } else {
+                    self.removeSpinner()
+                }
+                
+                self.tableView.reloadData()
+//                if self.products.isEmpty {
+//                    self.showNetworkErrorAlert(title: "No results",message: "There were no results found")
+//                }
+            }
+        
         }
     }
     
@@ -113,7 +126,7 @@ class ProductListViewController: UITableViewController, GIDSignInUIDelegate {
     
     @IBAction func logOutClicked(_ sender: Any) {
         GIDSignIn.sharedInstance()?.signOut()
-       
+        navigationController?.dismiss(animated: true, completion: nil)
         performSegue(withIdentifier: "BackToLogin", sender: self)
         
     }

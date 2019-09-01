@@ -18,7 +18,14 @@ class ProductCell: UITableViewCell {
     func setupCell(product: Product) {
         nameLabel.text = product.name
         salePriceLabel.text = "$\(product.salePrice!)"
-        let url = URL(string: product.image!)
-        productImage.kf.setImage(with: url)
+//        if let url = URL(string: product.image) {
+//            productImage.kf.setImage(with: url)
+//        }
+        if let urlString = product.image {
+            let imgUrl = URL(string: urlString)
+            
+            productImage.kf.setImage(with: imgUrl)
+        }
+//        productImage.kf.setImage(with: url)
     }
 }

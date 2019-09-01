@@ -29,11 +29,11 @@ class ProductDetailViewController: UIViewController {
         titleLabel.text = product.name
         descriptionLabel.text = product.shortDescription
         priceLabel.text = "$\(product.salePrice ?? 0.00)"
-        if let mainUrl = URL(string: product.image!) {
-            mainImageView.kf.setImage(with: mainUrl)
+        if let mainUrlString =  product.image {
+            let imgUrl = URL(string: mainUrlString)
+            mainImageView.kf.setImage(with: imgUrl)
             
         }
-        //MARK EXTEND UI IMAGE TO HANDLE THIS AND SHOW A STOCK IMAGE IF NULL
         if let alternateURLString = product.alternateViewsImage {
             let imgUrl = URL(string: alternateURLString)
 
@@ -69,7 +69,6 @@ class ProductDetailViewController: UIViewController {
             } else if itemCount == 0 {
                 self.insertProductToCart()
             }
-            
             
         }))
         alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: {action in print("cancel")}))

@@ -9,6 +9,7 @@
 import UIKit
 import CoreLocation
 
+
 class FindStoresViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, CLLocationManagerDelegate {
   
     
@@ -25,7 +26,10 @@ class FindStoresViewController: UIViewController, UITableViewDelegate, UITableVi
     var descriptionString: String?
     var sku: Int?
     var stores: [Store] = []
+    
     let locationManager = CLLocationManager()
+    var latitude: Double?
+    var longitude: Double?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,16 +41,21 @@ class FindStoresViewController: UIViewController, UITableViewDelegate, UITableVi
     
     
     func initiateSwitchState() {
-        let userDefualtLocation = false
-        locationSwitch.setOn(userDefualtLocation, animated: false)
+        
+        /// fetch bool from user defualts
+        let useLocation = UserDefaults.standard.bool(forKey: "useLocation") ?? false
+       
+        locationSwitch.setOn(useLocation, animated: false)
         manageSwitchState()
     }
     
     func manageSwitchState() {
         if locationSwitch.isOn {
+    
             getLocation()
             
         } else if !locationSwitch.isOn {
+            UserDefaults.standard.set(false, forKey: "useLocation")
             locationManager.stopUpdatingLocation()
         }
     }
@@ -61,16 +70,28 @@ class FindStoresViewController: UIViewController, UITableViewDelegate, UITableVi
         self.locationManager.requestWhenInUseAuthorization()
         print("location enabled? \(CLLocationManager.locationServicesEnabled())")
         if CLLocationManager.locationServicesEnabled() {
+            
+            UserDefaults.standard.set(true, forKey: "useLocation")
+            
             locationManager.delegate = self
             locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
-            locationManager.startUpdatingLocation()
+//            locationManager.startUpdatingLocation()
+            let location = locationManager.location
+            print("coordinates: \(location?.coordinate)")
+            if let coordinates = location?.coordinate {
+                latitude = coordinates.latitude
+                longitude = coordinates.longitude
+            }
         }
     }
     
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
-        print("locations = \(locValue.latitude) \(locValue.longitude)")
-    }
+//    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+//        guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
+//        print("locations = \(locValue.latitude) \(locValue.longitude)")
+//        latitude = locValue.latitude
+//        longitude = locValue.longitude
+//    }
+    
     
     func loadStores() {
         self.showSpinner(onView: self.view)
@@ -91,11 +112,7 @@ class FindStoresViewController: UIViewController, UITableViewDelegate, UITableVi
                     self.showNetworkErrorAlert(title: "No results",message: "There were no stores found")
                 }
             }
-            
         }
-        
-        
-        
     }
     
     private func setupUI() {

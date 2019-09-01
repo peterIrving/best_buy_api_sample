@@ -49,7 +49,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <segue destination="sg9-nn-lAq" kind="show" identifier="ProductListViewControllerSegue" id="N1i-ZL-dVw"/>
+                        <segue destination="sg9-nn-lAq" kind="presentation" identifier="ProductListViewControllerSegue" id="TKv-Ea-MRf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -28,21 +28,21 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Its-wQ-a6d">
-                                        <rect key="frame" x="8" y="62" width="64" height="30"/>
+                                        <rect key="frame" x="15" y="62" width="64" height="30"/>
                                         <state key="normal" title="checkout"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uNx-Fx-Bid">
-                                        <rect key="frame" x="304" y="62" width="62" height="30"/>
+                                        <rect key="frame" x="296" y="62" width="62" height="30"/>
                                         <state key="normal" title="delete all"/>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="HE8-qD-mqk" firstAttribute="top" secondItem="R6X-f4-lYO" secondAttribute="top" constant="16" id="7lt-TQ-85Y"/>
-                                    <constraint firstAttribute="trailing" secondItem="uNx-Fx-Bid" secondAttribute="trailing" constant="8" id="9E6-PU-DNM"/>
+                                    <constraint firstAttribute="trailing" secondItem="uNx-Fx-Bid" secondAttribute="trailing" constant="16" id="9E6-PU-DNM"/>
                                     <constraint firstItem="HE8-qD-mqk" firstAttribute="leading" secondItem="R6X-f4-lYO" secondAttribute="leading" constant="16" id="UPx-Kf-hqq"/>
                                     <constraint firstAttribute="height" constant="100" id="cjj-RM-hol"/>
-                                    <constraint firstItem="Its-wQ-a6d" firstAttribute="leading" secondItem="R6X-f4-lYO" secondAttribute="leading" constant="8" id="dVn-1W-Wki"/>
+                                    <constraint firstItem="Its-wQ-a6d" firstAttribute="leading" secondItem="R6X-f4-lYO" secondAttribute="leading" constant="15" id="dVn-1W-Wki"/>
                                     <constraint firstAttribute="bottom" secondItem="Its-wQ-a6d" secondAttribute="bottom" constant="8" id="fmA-PH-dVH"/>
                                     <constraint firstAttribute="trailing" secondItem="HE8-qD-mqk" secondAttribute="trailing" constant="16" id="g9V-ff-VHa"/>
                                     <constraint firstAttribute="bottom" secondItem="uNx-Fx-Bid" secondAttribute="bottom" constant="8" id="wzM-ac-ehK"/>

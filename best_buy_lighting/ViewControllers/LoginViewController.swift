@@ -26,7 +26,7 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate, LogInSuccessDe
     
     func logInSuccessful() {
         print("segue to products list")
-        performSegue(withIdentifier: "ProductListViewControllerSegue", sender: nil)
+        performSegue(withIdentifier: "ProductListViewControllerSegue", sender: self)
     }
 }
 
